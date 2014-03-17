@@ -7,15 +7,15 @@ This is a very simple wrapper for Wolfram|Alpha to allow use of the Facade inter
 
 If you're using laravel, add this service provider:
 ```php
-'ConnorVG\laravel-wolframalpha\WolframAlphaServiceProvider'
+'ConnorVG\WolframAlpha\WolframAlphaServiceProvider'
 ```
 
 Also, this Facade:
 ```php
-'WolframAlpha' => 'ConnorVG\laravel-wolframalpha\WolframAlphaFacade'
+'WolframAlpha' => 'ConnorVG\WolframAlpha\WolframAlphaFacade'
 ```
 
 I recommend:
 ```php
-'WA' => 'ConnorVG\laravel-wolframalpha\WolframAlphaFacade'
+'WA' => 'ConnorVG\WolframAlpha\WolframAlphaFacade'
 ```
