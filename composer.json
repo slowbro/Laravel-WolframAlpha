@@ -1,0 +1,21 @@
+{
+    "name": "connorvg/laravel-wolframalpha",
+    "description": "A Laravel wrapper for the Wolfram|Alpha API.",
+    "keywords": ["laravel", "wolfram", "wolframalpha"],
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "Connor Parks",
+            "email": "connorvg@gmx.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ConnorVG\\WolframAlpha\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
