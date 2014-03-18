@@ -13,6 +13,16 @@ $response = WA::easyQuery('5!');
 
 dd($response);
 ```
+	
+### Composer setup
+
+In the `require` key of `composer.json` file add the following
+
+    "connorvg/php-slack": "dev-master"
+
+Run the Composer update comand
+
+    $ composer update
 
 ### Laravel
 
