@@ -19,7 +19,8 @@
     },
     "suggest": {
         "connorvg/php-slack": "A PHP implementation for the Slack API w/ Laravel binds",
-        "connorvg/php-wtf": "A PHP implementation of my WholeTextFunctions library"
+        "connorvg/php-wtf": "A PHP implementation of my WholeTextFunctions library",
+        "connorvg/laravel-permissions": "A Laravel permissions package that uses keys rather than roles"
     },
     "minimum-stability": "dev"
 }
