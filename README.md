@@ -18,7 +18,7 @@ dd($response);
 
 In the `require` key of `composer.json` file add the following
 
-    "connorvg/php-slack": "dev-master"
+    "connorvg/laravel-wolframalpha": "dev-master"
 
 Run the Composer update comand
 
