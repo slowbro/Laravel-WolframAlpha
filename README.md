@@ -17,12 +17,14 @@ dd($response);
 ### Composer setup
 
 In the `require` key of `composer.json` file add the following
-
-    "connorvg/laravel-wolframalpha": "dev-master"
+```javascript
+"connorvg/laravel-wolframalpha": "dev-master"
+```
 
 Run the Composer update comand
-
-    $ composer update
+```bash
+$ composer update
+```
 
 ### Laravel
 
