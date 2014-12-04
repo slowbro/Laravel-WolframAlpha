@@ -15,6 +15,7 @@ class WAResponse {
   // private accessors
   private $pods = array();
   private $assumptions = array();
+  private $didyoumeans = array();
 
   // Constructor
   public function WAResponse () {
@@ -48,6 +49,14 @@ class WAResponse {
   }
 
   /**
+   *  Add a didyoumean to this response object
+   *  @param WADidyoumean $didyoumean	A WADidyoumean object to be added
+   */
+  public function addDidyoumean( $didyoumean ) {
+    $this->didyoumeans[] = $didyoumean;
+  }
+
+  /**
    *  Get the pods associated with this response
    *  @return array( WAPod )         An array of pods
    */
@@ -61,6 +70,14 @@ class WAResponse {
    */
   public function getAssumptions() {
     return $this->assumptions;
+  }
+
+  /**
+   *  Get the didyoumeans associated with this response
+   *  @return array( WADidyoumean )         An array of didyoumeans
+   */
+  public function getDidyoumeans() {
+    return $this->didyoumeans;
   }
 }
 ?>

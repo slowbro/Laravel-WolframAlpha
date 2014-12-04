@@ -87,6 +87,17 @@ class WolframAlphaEngine{
       return $response;
     }
 
+    // collect any didyoumeans
+    if( $xml->didyoumeans ) {
+      foreach( $xml->didyoumeans->didyoumean as $rawdym ) {
+        $dym = new WADidyoumean();
+        $dym->attributes = $this->parseAttributes( $rawdym );
+        $dym->text = (string) $rawdym;
+        $response->addDidyoumean( $dym );
+      }
+    }
+
+    // collect any pods
     foreach ( $xml->pod as $rawpod ) {
       $pod = new WAPod();
       $pod->attributes = $this->parseAttributes( $rawpod );
