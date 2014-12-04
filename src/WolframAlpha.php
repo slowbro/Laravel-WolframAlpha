@@ -6,9 +6,9 @@ class WolframAlpha
 	public $apikey;
 
 	/**
-	 * Thereshold for automatically querying a 'didyoumean'
+	 * Thereshold for automatically querying a 'didyoumean'. int or (bool)false
 	 * 
-	 * @int $scoreThreshold 
+	 * @var $scoreThreshold 
 	 */
     public $scoreThreshold;
 
@@ -50,7 +50,7 @@ class WolframAlpha
                     }
                 }
                 // if we are at or above the threhold, run the new query
-                if($score >= $this->scoreThreshold){
+                if($this->scoreThreshold !== false && $score >= $this->scoreThreshold){
                     return $this->easyQuery($d->text, $params);
                 } else {
                     return 'No answers found - did you mean "'.$d->text.'"?';
