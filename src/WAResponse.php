@@ -50,9 +50,9 @@ class WAResponse {
 
   /**
    *  Add a didyoumean to this response object
-   *  @param WADidyoumean $didyoumean	A WADidyoumean object to be added
+   *  @param WADidYouMean $didyoumean	A WADidYouMean object to be added
    */
-  public function addDidyoumean( $didyoumean ) {
+  public function addDidYouMean( $didyoumean ) {
     $this->didyoumeans[] = $didyoumean;
   }
 
@@ -74,9 +74,9 @@ class WAResponse {
 
   /**
    *  Get the didyoumeans associated with this response
-   *  @return array( WADidyoumean )         An array of didyoumeans
+   *  @return array( WADidYouMean )         An array of didyoumeans
    */
-  public function getDidyoumeans() {
+  public function getDidYouMeans() {
     return $this->didyoumeans;
   }
 }

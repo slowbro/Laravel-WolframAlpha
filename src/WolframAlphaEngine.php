@@ -90,10 +90,10 @@ class WolframAlphaEngine{
     // collect any didyoumeans
     if( $xml->didyoumeans ) {
       foreach( $xml->didyoumeans->didyoumean as $rawdym ) {
-        $dym = new WADidyoumean();
+        $dym = new WADidYouMean();
         $dym->attributes = $this->parseAttributes( $rawdym );
         $dym->text = (string) $rawdym;
-        $response->addDidyoumean( $dym );
+        $response->addDidYouMean( $dym );
       }
     }
 

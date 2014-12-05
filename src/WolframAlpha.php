@@ -10,7 +10,7 @@ class WolframAlpha
 	 * 
 	 * @var $scoreThreshold 
 	 */
-    public $scoreThreshold;
+	public $scoreThreshold;
 
 	/**
 	 * WolframAlphaEngine instance
@@ -28,7 +28,7 @@ class WolframAlpha
 	{
 		$this->apikey = $apikey;
 		$this->wrapped = new WolframAlphaEngine($apikey);
-        $this->scoreThreshold = $scoreThreshold;
+		$this->scoreThreshold = $scoreThreshold;
 	}
 
 	public function easyQuery($query, $params = [ 'format' => 'plaintext', 'scantimeout' => '.8' ])
@@ -41,24 +41,24 @@ class WolframAlpha
 
 
 		if (count($response->getPods()) < 1) {
-            if(count($response->getDidyoumeans())){
-                $score = 0;
-                foreach($response->getDidyoumeans() as $dym){
-                    if($dym->attributes['score'] > $score){
-                        $score = $dym->attributes['score'];
-                        $d = $dym;
-                    }
-                }
-                // if we are at or above the threhold, run the new query
-                if($this->scoreThreshold !== false && $score >= $this->scoreThreshold){
-                    return $this->easyQuery($d->text, $params);
-                } else {
-                    return 'No answers found - did you mean "'.$d->text.'"?';
-                }
-            } else {
-    			return 'No answers found!';
-            }
-        }
+			if(count($response->getDidYouMeans())){
+				$score = 0;
+				foreach($response->getDidYouMeans() as $dym){
+					if($dym->attributes['score'] > $score){
+						$score = $dym->attributes['score'];
+						$d = $dym;
+					}
+				}
+				// if we are at or above the threhold, run the new query
+				if($this->scoreThreshold !== false && $score >= $this->scoreThreshold){
+					return $this->easyQuery($d->text, $params);
+				} else {
+					return 'No answers found - did you mean "'.$d->text.'"?';
+				}
+			} else {
+				return 'No answers found!';
+			}
+		}
 
 		$answer = [];
 		$count = 0;
