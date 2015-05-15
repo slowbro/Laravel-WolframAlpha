@@ -5,12 +5,12 @@
  *  @package WolframAlpha
  */
 class WADidYouMean {
-  // define the sections of a response
-  public $attributes = array();
-  public $text;
+    // define the sections of a response
+    public $attributes = array();
+    public $text;
 
-  // Constructor
-  public function WADidYouMean () {
-  }
+    // Constructor
+    public function WADidYouMean() {
+    }
 
 }

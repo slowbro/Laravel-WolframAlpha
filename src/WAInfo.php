@@ -5,11 +5,11 @@
  *  @package WolframAlpha
  */
 class WAInfo {
-  // define the sections of a response
-  public $text = '';
- 
-  // Constructor
-  public function WAInfo () {
-  }
+    // define the sections of a response
+    public $text = '';
+
+    // Constructor
+    public function WAInfo() {
+    }
 
 }

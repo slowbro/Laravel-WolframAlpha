@@ -5,16 +5,16 @@
  *  @package WolframAlpha
  */
 class WASubpod {
-  // define the sections of a response
-  public $attributes = array();
-  public $plaintext = '';
-  public $image = '';
-  public $minput = '';
-  public $moutput = '';
-  public $mathml = '';
- 
-  // Constructor
-  public function WASubpod () {
-  }
+    // define the sections of a response
+    public $attributes = array();
+    public $plaintext = '';
+    public $image = '';
+    public $minput = '';
+    public $moutput = '';
+    public $mathml = '';
+
+    // Constructor
+    public function WASubpod() {
+    }
 
 }

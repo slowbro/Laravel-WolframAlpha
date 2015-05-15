@@ -5,64 +5,64 @@
  *  @package WolframAlpha
  */
 class WAPod {
-  // define the sections of a response
-  public $attributes = array();
-  public $markup = '';
-  
-  // private accessors
-  private $subpods = array();
-  private $substitutions = array();
-  private $infos = array();
- 
-  // Constructor
-  public function WAPod () {
-  }
+    // define the sections of a response
+    public $attributes = array();
+    public $markup = '';
 
-  /**
-   *  Add a subpod to this pod
-   *  @param WASubpod $subpod	the subpod to be added
-   */
-  public function addSubpod( $subpod ) {
-    $this->subpods[] = $subpod;
-  }
+    // private accessors
+    private $subpods = array();
+    private $substitutions = array();
+    private $infos = array();
 
-  /**
-   *  Add a substitution to this pod
-   *  @param WASubstitution $sub   the substitution to be added
-   */
-  public function addSubstitution( $sub ) {
-    $this->substitutions[] = $sub;
-  }
+    // Constructor
+    public function WAPod() {
+    }
 
-  /**
-   *  Add an info to this pod
-   *  @param WAInfo $info   the info to be added
-   */
-  public function addInfo( $info ) {
-    $this->infos[] = $info;
-  }
+    /**
+     *  Add a subpod to this pod
+     *  @param WASubpod $subpod	the subpod to be added
+     */
+    public function addSubpod($subpod) {
+        $this->subpods[] = $subpod;
+    }
 
-  /**
-   *  Get the subpods associated with this pod
-   *  @return array( WASubpod ) 	An array of subpods
-   */
-  public function getSubpods() {
-    return $this->subpods;
-  }
+    /**
+     *  Add a substitution to this pod
+     *  @param WASubstitution $sub   the substitution to be added
+     */
+    public function addSubstitution($sub) {
+        $this->substitutions[] = $sub;
+    }
 
-  /**
-   *  Get the substitutions associated with this pod
-   *  @return array( WASubstitution )         An array of substitutions
-   */
-  public function getSubstitutions() {
-    return $this->substitutions;
-  }
+    /**
+     *  Add an info to this pod
+     *  @param WAInfo $info   the info to be added
+     */
+    public function addInfo($info) {
+        $this->infos[] = $info;
+    }
 
-  /**
-   *  Get the infos associated with this pod
-   *  @return array( WAInfo )         An array of infos
-   */
-  public function getInfos() {
-    return $this->infos;
-  }
+    /**
+     *  Get the subpods associated with this pod
+     *  @return array( WASubpod ) 	An array of subpods
+     */
+    public function getSubpods() {
+        return $this->subpods;
+    }
+
+    /**
+     *  Get the substitutions associated with this pod
+     *  @return array( WASubstitution )         An array of substitutions
+     */
+    public function getSubstitutions() {
+        return $this->substitutions;
+    }
+
+    /**
+     *  Get the infos associated with this pod
+     *  @return array( WAInfo )         An array of infos
+     */
+    public function getInfos() {
+        return $this->infos;
+    }
 }

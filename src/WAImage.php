@@ -5,11 +5,11 @@
  *  @package WolframAlpha
  */
 class WAImage {
-  // define the sections of a response
-  public $attributes = array();
- 
-  // Constructor
-  public function WAImage () {
-  }
+    // define the sections of a response
+    public $attributes = array();
+
+    // Constructor
+    public function WAImage() {
+    }
 
 }
