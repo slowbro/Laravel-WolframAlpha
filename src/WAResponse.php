@@ -80,4 +80,3 @@ class WAResponse {
     return $this->didyoumeans;
   }
 }
-?>

@@ -66,5 +66,3 @@ class WAPod {
     return $this->infos;
   }
 }
-?>
-
