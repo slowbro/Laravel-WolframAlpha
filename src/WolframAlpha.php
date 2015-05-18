@@ -13,6 +13,13 @@ class WolframAlpha
     public $scoreThreshold;
 
     /**
+     * What 'didyoumean' that was automatically selected. (bool)false means no didyoumean was selected.
+     * 
+     * @var $scoreThreshold 
+     */
+    public $didyoumean = false;
+
+    /**
      * WolframAlphaEngine instance
      * 
      * @var ConnorVG\WolframAlpha\WolframAlphaEngine
@@ -50,6 +57,7 @@ class WolframAlpha
                 }
                 // if we are at or above the threhold, run the new query
                 if($this->scoreThreshold !== false && $score >= $this->scoreThreshold) {
+                    $this->didyoumean = $d->text;
                     return $this->easyQuery($d->text, $params);
                 } else {
                     return 'No answers found - did you mean "'.$d->text.'"?';
