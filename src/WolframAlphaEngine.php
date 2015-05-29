@@ -175,7 +175,7 @@ class WolframAlphaEngine{
                     $valAtt = $this->parseAttributes( $value );
                     $assumption = new WAAssumption();
                     $assumption->type = $att['type'];
-                    $assumption->word = $att['word'];
+                    $assumption->word = (isset($att['word'])?$att['word']:null);
                     $assumption->name = $valAtt['name'];
                     $assumption->description = $valAtt['desc'];
                     $assumption->input = $valAtt['input'];
